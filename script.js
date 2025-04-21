@@ -1,5 +1,25 @@
 function indexOfIgnoreCase(s1, s2) {
-  // write your code here
+    var ans=-1;
+    
+     for(let i=0;i<s1.length;i++){
+         
+         let str="";
+         
+         for(let j=i;j<s1.length;j++){
+             str+=s1.charAt(j);
+             
+              let lower=str.toLowerCase();
+              let upper=s2.toLowerCase();
+             
+             if(lower==upper){
+                 ans=i;
+                 break;
+             }
+             
+         }
+     }
+     
+     return ans;
 }
 
 // Please do not change the code below
